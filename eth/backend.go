@@ -1,18 +1,18 @@
-// Copyright 2014 The go-ethereum Authors
-// This file is part of the go-ethereum library.
+// Copyright 2014 The go-alternative Authors
+// This file is part of the go-alternative library.
 //
-// The go-ethereum library is free software: you can redistribute it and/or modify
+// The go-alternative library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The go-ethereum library is distributed in the hope that it will be useful,
+// The go-alternative library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
+// along with the go-alternative library. If not, see <http://www.gnu.org/licenses/>.
 
 // Package eth implements the Ethereum protocol.
 package eth
@@ -25,29 +25,29 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/clique"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/bloombits"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/filters"
-	"github.com/ethereum/go-ethereum/eth/gasprice"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/miner"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/ethereum-alt/go-alternative/accounts"
+	"github.com/ethereum-alt/go-alternative/common"
+	"github.com/ethereum-alt/go-alternative/common/hexutil"
+	"github.com/ethereum-alt/go-alternative/consensus"
+	"github.com/ethereum-alt/go-alternative/consensus/clique"
+	"github.com/ethereum-alt/go-alternative/consensus/ethash"
+	"github.com/ethereum-alt/go-alternative/core"
+	"github.com/ethereum-alt/go-alternative/core/bloombits"
+	"github.com/ethereum-alt/go-alternative/core/types"
+	"github.com/ethereum-alt/go-alternative/core/vm"
+	"github.com/ethereum-alt/go-alternative/eth/downloader"
+	"github.com/ethereum-alt/go-alternative/eth/filters"
+	"github.com/ethereum-alt/go-alternative/eth/gasprice"
+	"github.com/ethereum-alt/go-alternative/ethdb"
+	"github.com/ethereum-alt/go-alternative/event"
+	"github.com/ethereum-alt/go-alternative/internal/ethapi"
+	"github.com/ethereum-alt/go-alternative/log"
+	"github.com/ethereum-alt/go-alternative/miner"
+	"github.com/ethereum-alt/go-alternative/node"
+	"github.com/ethereum-alt/go-alternative/p2p"
+	"github.com/ethereum-alt/go-alternative/params"
+	"github.com/ethereum-alt/go-alternative/rlp"
+	"github.com/ethereum-alt/go-alternative/rpc"
 )
 
 type LesServer interface {

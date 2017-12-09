@@ -1,18 +1,18 @@
-// Copyright 2015 The go-ethereum Authors
-// This file is part of the go-ethereum library.
+// Copyright 2015 The go-alternative Authors
+// This file is part of the go-alternative library.
 //
-// The go-ethereum library is free software: you can redistribute it and/or modify
+// The go-alternative library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The go-ethereum library is distributed in the hope that it will be useful,
+// The go-alternative library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
+// along with the go-alternative library. If not, see <http://www.gnu.org/licenses/>.
 
 // Package release contains the node service that tracks client releases.
 package release
@@ -25,15 +25,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/les"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/ethereum-alt/go-alternative/accounts/abi/bind"
+	"github.com/ethereum-alt/go-alternative/common"
+	"github.com/ethereum-alt/go-alternative/eth"
+	"github.com/ethereum-alt/go-alternative/internal/ethapi"
+	"github.com/ethereum-alt/go-alternative/les"
+	"github.com/ethereum-alt/go-alternative/log"
+	"github.com/ethereum-alt/go-alternative/node"
+	"github.com/ethereum-alt/go-alternative/p2p"
+	"github.com/ethereum-alt/go-alternative/rpc"
 )
 
 // Interval to check for new releases
@@ -149,7 +149,7 @@ func (r *ReleaseService) checkVersion() {
 
 		warning := fmt.Sprintf("Client v%d.%d.%d-%x seems older than the latest upstream release v%d.%d.%d-%x",
 			r.config.Major, r.config.Minor, r.config.Patch, r.config.Commit[:4], version.Major, version.Minor, version.Patch, version.Commit[:4])
-		howtofix := fmt.Sprintf("Please check https://github.com/ethereum/go-ethereum/releases for new releases")
+		howtofix := fmt.Sprintf("Please check https://github.com/ethereum-alt/go-alternative/releases for new releases")
 		separator := strings.Repeat("-", len(warning))
 
 		log.Warn(separator)
